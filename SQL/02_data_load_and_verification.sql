@@ -1,11 +1,42 @@
 -- ============================================================
 -- PROJECT: Marketing Campaign Analysis
 -- FILE: 02_data_load_and_verification.sql
--- PURPOSE: Validate the customer data loaded into MySQL
+-- PURPOSE: Load the cleaned customer data and validate the import
 -- AUTHOR: Ameena Juhi
 -- ============================================================
 
 USE marketing_campaign_db;
+
+-- ============================================================
+-- DATA LOAD INSTRUCTIONS
+-- ============================================================
+
+-- The cleaned dataset can be loaded reproducibly using the
+-- following MySQL DML command.
+--
+-- IMPORTANT:
+-- 1. Replace the example path with the actual CSV path.
+-- 2. Enable LOCAL INFILE in MySQL if required.
+-- 3. Run this only when the customers table is empty.
+-- 4. Do not execute it again after the 56,000 rows are loaded,
+--    because ID is a primary key.
+
+-- Optional: use only when intentionally reloading the table.
+-- TRUNCATE TABLE customers;
+
+-- Reproducible CSV loading command:
+-- Remove the comment markers only when a fresh load is required.
+
+/*
+LOAD DATA LOCAL INFILE
+'C:/Marketing_Campaign_Analysis/Dataset/marketing_campaign_cleaned.csv'
+INTO TABLE customers
+CHARACTER SET utf8mb4
+FIELDS TERMINATED BY ','
+OPTIONALLY ENCLOSED BY '"'
+LINES TERMINATED BY '\n'
+IGNORE 1 ROW;
+*/
 
 -- ============================================================
 -- 1. Verify total and unique customer records
