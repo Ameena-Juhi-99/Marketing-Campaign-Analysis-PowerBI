@@ -32,6 +32,7 @@ The project examines customer demographics, purchasing behaviour, product prefer
 | `powerbi_campaign_performance.csv` | Campaign-level fact table for Power BI |
 | `powerbi_product_spending.csv` | Customer-product spending fact table for Power BI |
 | `powerbi_channel_purchases.csv` | Customer-channel purchase fact table for Power BI |
+| `powerbi_segment_summary.csv` | Summary table containing key customer-segment metrics |
 
 The data covers demographics, income, household composition, product spending, purchase channels, promotions, web behaviour, complaints, country, and campaign acceptance.
 
@@ -79,7 +80,7 @@ The SQL layer contains seven ordered scripts:
 | `03_executive_kpi_queries.sql` | Produces executive KPIs and campaign performance summaries |
 | `04_demographic_segmentation_queries.sql` | Analyses age, income, education, relationship, country, and customer segments |
 | `05_product_and_channel_queries.sql` | Analyses product spending, purchase channels, promotions, and deal behaviour |
-| `06_advanced_window_queries.sql` | Demonstrates ranking and other analytical window functions |
+| `06_advanced_window_function_queries.sql` | Demonstrates ranking and other analytical window functions |
 | `07_reporting_views.sql` | Creates reusable reporting views for dashboards and analysis |
 
 The database implementation demonstrates DDL, data loading, aggregate functions, `CASE` expressions, CTEs, `UNION ALL`, window functions, constraints, and reusable views.
@@ -168,7 +169,8 @@ Marketing-Campaign-Analysis-PowerBI/
 │   ├── marketing_campaign_cleaned.csv
 │   ├── powerbi_campaign_performance.csv
 │   ├── powerbi_product_spending.csv
-│   └── powerbi_channel_purchases.csv
+│   ├── powerbi_channel_purchases.csv
+│   └── powerbi_segment_summary.csv
 ├── Images/
 │   ├── 01_Executive_Overview.png
 │   ├── 02_Customer_Segmentation.png
@@ -187,7 +189,7 @@ Marketing-Campaign-Analysis-PowerBI/
 │   ├── 03_executive_kpi_queries.sql
 │   ├── 04_demographic_segmentation_queries.sql
 │   ├── 05_product_and_channel_queries.sql
-│   ├── 06_advanced_window_queries.sql
+│   ├── 06_advanced_window_function_queries.sql
 │   └── 07_reporting_views.sql
 ├── .gitignore
 ├── README.md
